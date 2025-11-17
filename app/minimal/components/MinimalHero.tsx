@@ -77,21 +77,27 @@ export function MinimalHero() {
             >
               CURRENT ROLES:
             </motion.p>
-            <BlurSweepText
-              text="AI Program Coordinator, NYU Langone"
-              delay={2.5}
-              duration={1.0}
-            />
-            <BlurSweepText
-              text="Co-Founder, BuzzHive"
-              delay={3.0}
-              duration={0.8}
-            />
-            <BlurSweepText
-              text="MS Computer Science, Binghamton University"
-              delay={3.4}
-              duration={1.2}
-            />
+            <motion.p
+              initial={{ opacity: 0, filter: "blur(8px)" }}
+              animate={{ opacity: 1, filter: "blur(0px)" }}
+              transition={{ delay: 3.5, duration: 0.8 }}
+            >
+              AI Program Coordinator, NYU Langone
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, filter: "blur(8px)" }}
+              animate={{ opacity: 1, filter: "blur(0px)" }}
+              transition={{ delay: 4.5, duration: 0.8 }}
+            >
+              Co-Founder, BuzzHive
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, filter: "blur(8px)" }}
+              animate={{ opacity: 1, filter: "blur(0px)" }}
+              transition={{ delay: 5.5, duration: 0.8 }}
+            >
+              MS Computer Science, Binghamton University
+            </motion.p>
           </div>
         </div>
       </div>
