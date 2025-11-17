@@ -4,7 +4,7 @@ export function MinimalHeader() {
   return (
     <header className="fixed top-0 w-full backdrop-blur-sm bg-[#EDECEC]/90 dark:bg-[#13120A]/90 z-50 border-b border-[#999895]/20">
       <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-        <Link href="/minimal" className="text-[11px] tracking-[0.3em] font-normal text-[#13120A] dark:text-[#EDECEC] uppercase hover:text-[#F44E01] transition-colors -ml-2">
+        <Link href="/" className="text-[11px] tracking-[0.3em] font-normal text-[#13120A] dark:text-[#EDECEC] uppercase hover:text-[#F44E01] transition-colors -ml-2">
           Michael Bronikowski
         </Link>
 
