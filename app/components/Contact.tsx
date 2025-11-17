@@ -60,7 +60,7 @@ export function Contact() {
             </motion.a>
 
             <motion.a
-              href="https://linkedin.com/in/michaelbronikowski"
+              href="https://www.linkedin.com/in/michael-bronikowski/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-4 rounded-full bg-[#3D342E] border border-[#3D342E] hover:border-[#D99D24] hover:bg-[#D99D24] text-[#FAF8F3] transition-all shadow-md"

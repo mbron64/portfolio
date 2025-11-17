@@ -50,7 +50,7 @@ export function MinimalContact() {
               <FiGithub className="w-5 h-5" />
             </a>
             <a
-              href="https://linkedin.com/in/michaelbronikowski"
+              href="https://www.linkedin.com/in/michael-bronikowski/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#999895] hover:text-[#F44E01] transition-colors"
