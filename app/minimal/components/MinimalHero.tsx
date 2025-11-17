@@ -87,14 +87,14 @@ export function MinimalHero() {
             <motion.p
               initial={{ opacity: 0, filter: "blur(8px)" }}
               animate={{ opacity: 1, filter: "blur(0px)" }}
-              transition={{ delay: 4.3, duration: 0.8 }}
+              transition={{ delay: 3.9, duration: 0.8 }}
             >
               Co-Founder, BuzzHive
             </motion.p>
             <motion.p
               initial={{ opacity: 0, filter: "blur(8px)" }}
               animate={{ opacity: 1, filter: "blur(0px)" }}
-              transition={{ delay: 5.1, duration: 0.8 }}
+              transition={{ delay: 4.3, duration: 0.8 }}
             >
               MS Computer Science, Binghamton University
             </motion.p>
