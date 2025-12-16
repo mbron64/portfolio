@@ -96,7 +96,7 @@ export function MinimalHero() {
               animate={{ opacity: 1, filter: "blur(0px)" }}
               transition={{ delay: 4.3, duration: 0.8 }}
             >
-              MS Computer Science, Binghamton University
+              MS Computer Science (AI) (in progress), Binghamton University
             </motion.p>
           </div>
         </div>

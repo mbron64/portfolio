@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Bronikowski - Blog</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.10/purify.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog-styles.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4HBLRV8W3H"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4HBLRV8W3H');
+    </script>
+</head>
+<body>
+    <div class="content-wrapper">
+        <header>
+            <img src="IMG_6397 3.jpg" alt="profile" class="profile-pic">
+            <div class="header-text">
+                <h1>Michael Bronikowski</h1>
+                <p>M.S. Computer Science (AI) (2nd year, in progress) · <a href="https://www.binghamton.edu/" target="_blank">Binghamton University</a></p>
+                <p>AI Program Coordinator · <a href="https://tov.med.nyu.edu/team/michael-bronikowski/" target="_blank" rel="noopener">NYULH</a></p>
+                <p>mbronik1@binghamton dot edu</p>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="cv.html">CV</a>
+                    <a href="blog.html" class="active">Blog</a>
+                <a href="photos.html">Photos</a>
+            </nav>
+            </div>
+        </header>
+        <main>
+            <div id="post-list"></div>
+            <div id="blog-container" style="display: none;">
+                <aside id="toc-sidebar">
+                    <h3>Contents</h3>
+                    <div id="toc"></div>
+                </aside>
+                <div id="blog-content-wrapper">
+                    <div id="blog-content"></div>
+                </div>
+            </div>
+            <div class="mode-toggle">
+                <span>View:</span>
+                <a href="index.html">Research</a>
+                <a href="modern/">AI Website</a>
+            </div>
+        </main>
+    </div>
+    <script src="js/blog.js"></script>
+</body>
+</html>
+
+
