@@ -197,23 +197,10 @@
         </main>
     </div>
     <script>
-        // Load everything up-front (no lazy loading).
-        const imgs = Array.from(document.querySelectorAll('.photo-gallery img'));
-        imgs.forEach((img) => {
-            img.loading = 'eager';
+        // Improve scroll performance by deferring image decoding/loading
+        document.querySelectorAll('.photo-gallery img').forEach((img) => {
+            img.loading = 'lazy';
             img.decoding = 'async';
-        });
-
-        // Force prefetch of all images immediately (McMaster-Carr style).
-        // This can use more bandwidth, but makes scrolling instant.
-        const seen = new Set();
-        imgs.forEach((img) => {
-            const url = img.currentSrc || img.src;
-            if (!url || seen.has(url)) return;
-            seen.add(url);
-            const i = new Image();
-            i.decoding = 'async';
-            i.src = url;
         });
     </script>
 </body>
