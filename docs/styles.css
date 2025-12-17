@@ -3,10 +3,17 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 body {
-    font-family: "Comic Sans MS", "Chalkboard SE", "Comic Neue", sans-serif;
+    font-family: "Times New Roman", Times, serif;
     line-height: 1.6;
     color: black;
     background-image: url('IMG_8682.jpg');
@@ -16,26 +23,44 @@ body {
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 .content-wrapper {
     flex-grow: 1;
     width: 800px;
+    /* No top gap: keep the white frame flush to top */
     margin: 0 auto;
-    padding: 20px;
+    /* Mimic table border + cellspacing:
+       - 8px outer white margin (like body default margin)
+       - 3px gap between outer border and inner cells (cellspacing)
+    */
+    padding: 11px;
     background-color: white;
     display: flex;
     flex-direction: column;
     position: relative;
 }
 
+.content-wrapper::before {
+    content: "";
+    position: absolute;
+    /* Outer border drawn inset from the white frame */
+    inset: 8px;
+    border-style: solid;
+    border-width: 1px;
+    /* top right bottom left */
+    border-color: #808080 #2c2c2c #2c2c2c #808080;
+    pointer-events: none;
+}
+
 header {
-    margin-bottom: 20px;
     display: flex;
     flex-direction: row-reverse;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
-    gap: 20px;
+    gap: 3px;
+    background-color: white;
 }
 
 header.nav-only {
@@ -44,18 +69,32 @@ header.nav-only {
 }
 
 .profile-pic {
-    width: 250px;
-    height: 200px;
+    width: 230px;
+    height: auto;
     object-fit: cover;
-    margin-right: 20px;
+    padding: 8px;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #2c2c2c #808080 #808080 #2c2c2c;
 }
 
 .header-text {
     flex-grow: 1;
+    padding: 10px;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #2c2c2c #808080 #808080 #2c2c2c;
 }
 
 h1 {
-    margin-bottom: 5px;
+    margin-bottom: 4px;
+}
+
+/* Tighten vertical spacing inside header text block */
+.header-text p {
+    margin: 2px 0;
 }
 
 nav {
@@ -88,6 +127,24 @@ nav {
     font-size: 14px;
 }
 
+.bottom-row {
+    margin-top: auto;
+    padding-top: 12px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.bottom-row .wallpaper-note {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.bottom-row .wallpaper-note p {
+    margin: 0;
+}
+
 nav a {
     margin-right: 10px;
     position: relative;
@@ -106,6 +163,12 @@ main {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    padding: 10px 20px;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #2c2c2c #808080 #808080 #2c2c2c;
+    margin-top: 3px;
 }
 
 #blog-content img {
@@ -114,8 +177,8 @@ main {
 }
 
 .wallpaper-note {
-    margin-top: auto;
-    padding-top: 10px;
+    margin-top: 0;
+    padding-top: 0;
     font-size: 0.9em;
 }
 
@@ -128,7 +191,7 @@ embed {
     .content-wrapper {
         width: 100%;
         max-width: 800px;
-        padding: 20px;
+        padding: 11px;
     }
 }
 
@@ -181,7 +244,7 @@ main ul ul li {
 
 @media (max-width: 767px) {
     .content-wrapper {
-        padding: 10px;
+        padding: 11px;
     }
 
     header {
@@ -197,8 +260,8 @@ main ul ul li {
     }
 
     .profile-pic {
-        width: 140px;
-        height: 140px;
+        width: 120px;
+        height: 120px;
         margin-right: 0;
     }
 
@@ -206,8 +269,16 @@ main ul ul li {
         width: 100%;
     }
 
+    .header-text h1 {
+        font-size: 1.5rem;
+        margin-bottom: 6px;
+    }
+
     .header-text p {
         margin: 2px 0;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        word-wrap: break-word;
     }
 
     nav {
@@ -215,10 +286,12 @@ main ul ul li {
         flex-wrap: wrap;
         gap: 10px 14px;
         padding-bottom: 18px;
+        margin-top: 8px;
     }
 
     nav a {
         margin-right: 0;
+        font-size: 0.95rem;
     }
 
     nav a.active::after {
@@ -234,4 +307,3 @@ main ul ul li {
 #clustrmaps-widget-v2{
     display: none !important;
 }
-
