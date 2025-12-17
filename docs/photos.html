@@ -197,45 +197,24 @@
         </main>
     </div>
     <script>
-        // Make scrolling feel instant: preload images ahead of the viewport.
+        // Load everything up-front (no lazy loading).
         const imgs = Array.from(document.querySelectorAll('.photo-gallery img'));
-
-        // Lazy by default, but decode async to keep scrolling smooth.
-        imgs.forEach((img, idx) => {
-            img.loading = idx < 2 ? 'eager' : 'lazy'; // first images show immediately
+        imgs.forEach((img) => {
+            img.loading = 'eager';
             img.decoding = 'async';
         });
 
-        // Preload an image URL without inserting into DOM.
-        const preloadUrl = (() => {
-            const seen = new Set();
-            return (url) => {
-                if (!url || seen.has(url)) return;
-                seen.add(url);
-                const i = new Image();
-                i.decoding = 'async';
-                i.src = url;
-            };
-        })();
-
-        // When an image is within ~1200px, preload it + the next few.
-        const observer = new IntersectionObserver((entries) => {
-            for (const entry of entries) {
-                if (!entry.isIntersecting) continue;
-                const img = entry.target;
-                const i = imgs.indexOf(img);
-
-                for (let j = i; j <= Math.min(i + 6, imgs.length - 1); j++) {
-                    const url = imgs[j].currentSrc || imgs[j].src;
-                    preloadUrl(url);
-                    imgs[j].loading = 'eager';
-                }
-
-                observer.unobserve(img);
-            }
-        }, { rootMargin: '1200px 0px', threshold: 0.01 });
-
-        imgs.forEach((img) => observer.observe(img));
+        // Force prefetch of all images immediately (McMaster-Carr style).
+        // This can use more bandwidth, but makes scrolling instant.
+        const seen = new Set();
+        imgs.forEach((img) => {
+            const url = img.currentSrc || img.src;
+            if (!url || seen.has(url)) return;
+            seen.add(url);
+            const i = new Image();
+            i.decoding = 'async';
+            i.src = url;
+        });
     </script>
 </body>
 </html>
