@@ -39,9 +39,9 @@
         <main>
             <p class="page-description">A collection of my ChatGPT deep research queries</p>
             
-            <div class="research-list">
+            <div id="research-list" class="research-list">
                 <div class="research-item">
-                    <a href="deep-research/cus-damato-training.pdf" target="_blank" class="research-link">
+                    <a href="#" onclick="showPDF('deep-research/Cus D'Amato's Training Philosophy and Methods.pdf', 'Cus D\'Amato\'s Training Philosophy and Methods'); return false;" class="research-link">
                         <span class="research-title">Cus D'Amato's Training Philosophy and Methods</span>
                         <span class="research-meta">Boxing · Psychology · Training Systems</span>
                     </a>
@@ -49,15 +49,10 @@
                 </div>
             </div>
             
-            <div id="post-list" style="display: none;"></div>
-            <div id="blog-container" style="display: none;">
-                <aside id="toc-sidebar">
-                    <h3>Contents</h3>
-                    <div id="toc"></div>
-                </aside>
-                <div id="blog-content-wrapper">
-                    <div id="blog-content"></div>
-                </div>
+            <div id="pdf-viewer" style="display: none;">
+                <p><a href="#" onclick="hidePDF(); return false;">← Back to list</a></p>
+                <h3 id="pdf-title"></h3>
+                <embed id="pdf-embed" src="" type="application/pdf">
             </div>
             <div class="mode-toggle">
                 <span>View:</span>
@@ -66,7 +61,20 @@
             </div>
         </main>
     </div>
-    <script src="js/deep-research.js"></script>
+    <script>
+    function showPDF(pdfUrl, title) {
+        document.getElementById('research-list').style.display = 'none';
+        document.getElementById('pdf-viewer').style.display = 'block';
+        document.getElementById('pdf-title').textContent = title;
+        document.getElementById('pdf-embed').src = pdfUrl;
+    }
+    
+    function hidePDF() {
+        document.getElementById('pdf-viewer').style.display = 'none';
+        document.getElementById('research-list').style.display = 'block';
+        document.getElementById('pdf-embed').src = '';
+    }
+    </script>
 </body>
 </html>
 
