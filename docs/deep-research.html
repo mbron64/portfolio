@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michael Bronikowski - Blog</title>
+    <title>Michael Bronikowski - Deep Research</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.10/purify.min.js"></script>
     <link rel="stylesheet" href="styles.css">
@@ -30,14 +30,26 @@
             <nav>
                 <a href="index.html">Home</a>
                 <a href="cv.html">CV</a>
-                <a href="blog.html" class="active">Blog</a>
-                <a href="deep-research.html">Deep-Research</a>
+                <a href="blog.html">Blog</a>
+                <a href="deep-research.html" class="active">Deep-Research</a>
                 <a href="photos.html">Photos</a>
             </nav>
             </div>
         </header>
         <main>
-            <div id="post-list"></div>
+            <p class="page-description">Deep research query outputs exploring AI, training philosophy, and interdisciplinary topics.</p>
+            
+            <div class="research-list">
+                <div class="research-item">
+                    <a href="deep-research/cus-damato-training.pdf" target="_blank" class="research-link">
+                        <span class="research-title">Cus D'Amato's Training Philosophy and Methods</span>
+                        <span class="research-meta">Boxing · Psychology · Training Systems</span>
+                    </a>
+                    <p class="research-description">A comprehensive analysis of legendary boxing trainer Cus D'Amato's peek-a-boo style, psychological coaching methods, and training routines that produced champions like Floyd Patterson, José Torres, and Mike Tyson.</p>
+                </div>
+            </div>
+            
+            <div id="post-list" style="display: none;"></div>
             <div id="blog-container" style="display: none;">
                 <aside id="toc-sidebar">
                     <h3>Contents</h3>
@@ -54,8 +66,7 @@
             </div>
         </main>
     </div>
-    <script src="js/blog.js"></script>
+    <script src="js/deep-research.js"></script>
 </body>
 </html>
-
 

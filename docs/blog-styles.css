@@ -94,4 +94,56 @@
     }
 }
 
+/* Deep Research styles */
+.research-list {
+    margin-top: 10px;
+}
+
+.research-item {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.research-item:last-child {
+    border-bottom: none;
+}
+
+.research-link {
+    display: block;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+.research-link:hover .research-title {
+    text-decoration: underline;
+}
+
+.research-title {
+    display: block;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #0066cc;
+    margin-bottom: 4px;
+}
+
+.research-meta {
+    display: block;
+    font-size: 0.85em;
+    color: #666;
+}
+
+.research-description {
+    font-size: 0.95em;
+    color: #333;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.page-description {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
+}
+
 
