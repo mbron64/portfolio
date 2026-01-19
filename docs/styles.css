@@ -228,6 +228,12 @@ main ul ul li {
     object-fit: contain;
     border-radius: 0;
     display: block;
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+.photo-gallery img.loaded {
+    opacity: 1;
 }
 
 .photo-gallery figcaption {
