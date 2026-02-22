@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Michael Bronikowski</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4HBLRV8W3H"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4HBLRV8W3H');
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin-top: 20px;
+        }
+
+        @media (min-width: 600px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .project-card {
+            border: 1px solid #ccc;
+            border-color: #2c2c2c #808080 #808080 #2c2c2c;
+            background: #fafafa;
+            overflow: hidden;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .project-card:hover {
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .project-card a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            object-position: top;
+            background: linear-gradient(135deg, #e8e8e8 0%, #f5f5f5 100%);
+            display: block;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .project-image.loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.85em;
+        }
+
+        .project-content {
+            padding: 12px 14px;
+        }
+
+        .project-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin: 0 0 6px 0;
+            color: #0066cc;
+        }
+
+        .project-card:hover .project-title {
+            text-decoration: underline;
+        }
+
+        .project-description {
+            font-size: 0.9em;
+            color: #333;
+            margin: 0 0 8px 0;
+            line-height: 1.5;
+        }
+
+        .project-url {
+            font-size: 0.8em;
+            color: #666;
+        }
+
+        .project-tag {
+            display: inline-block;
+            font-size: 0.75em;
+            background: #e0e0e0;
+            padding: 2px 8px;
+            border-radius: 3px;
+            margin-right: 6px;
+            margin-top: 6px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <header>
+            <img src="IMG_6397 3.jpg" alt="profile" class="profile-pic">
+            <div class="header-text">
+                <h1>Michael Bronikowski</h1>
+                <p>AI Program Coordinator · <a href="https://tov.med.nyu.edu/team/michael-bronikowski/" target="_blank" rel="noopener">NYULH</a></p>
+                <p>M.S. Computer Science, AI (Expected May 2026) · <a href="https://www.binghamton.edu/" target="_blank">Binghamton University</a></p>
+                <p>B.S. Engineering Physics &amp; B.A. Mathematics · <a href="https://www.binghamton.edu/" target="_blank">Binghamton University</a></p>
+                <p>Beekeeper</p>
+                <p>mbronik1@binghamton dot edu</p>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="cv.html">CV</a>
+                    <a href="projects.html" class="active">Projects</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="deep-research.html">Deep-Research</a>
+                    <a href="photos.html">Photos</a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <p>A collection of products and side projects I've built or helped build over the years.</p>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <a href="https://buzzhivetech.com" target="_blank" rel="noopener">
+                        <img class="project-image" src="https://api.microlink.io/?url=https://buzzhivetech.com&screenshot=true&meta=false&embed=screenshot.url&screenshot.scrollTo=0,0&waitUntil=load" alt="BuzzHive" onerror="this.style.display='none'">
+                        <div class="project-content">
+                            <h3 class="project-title">BuzzHive</h3>
+                            <p class="project-description">AI-powered beehive management system combining IoT sensors and predictive analytics to help beekeepers monitor hive health and reduce colony losses.</p>
+                            <span class="project-tag">AI/ML</span>
+                            <span class="project-tag">IoT</span>
+                            <span class="project-tag">AgTech</span>
+                            <div class="project-url">buzzhivetech.com</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <a href="https://bound2.ai" target="_blank" rel="noopener">
+                        <img class="project-image" src="https://api.microlink.io/?url=https://bound2.ai&screenshot=true&meta=false&embed=screenshot.url&waitUntil=networkidle0&delay=3000" alt="Bound" onerror="this.style.display='none'">
+                        <div class="project-content">
+                            <h3 class="project-title">Bound</h3>
+                            <p class="project-description">AI teammates that join your meetings and do the work. Bound listens, writes tickets, ships code, and coordinates across your team's existing tools.</p>
+                            <span class="project-tag">AI Agents</span>
+                            <span class="project-tag">Enterprise</span>
+                            <div class="project-url">bound2.ai</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <a href="https://zoomclaw.com" target="_blank" rel="noopener">
+                        <img class="project-image" src="https://api.microlink.io/?url=https://zoomclaw.com&screenshot=true&meta=false&embed=screenshot.url" alt="ZoomClaw" onerror="this.style.display='none'">
+                        <div class="project-content">
+                            <h3 class="project-title">ZoomClaw</h3>
+                            <p class="project-description">Invite OpenClaw to your Zoom meetings. Your AI assistant joins, listens, and responds using the tools and models running locally on your machine.</p>
+                            <span class="project-tag">AI Assistant</span>
+                            <span class="project-tag">Zoom</span>
+                            <div class="project-url">zoomclaw.com</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <a href="https://simplestclaw.com" target="_blank" rel="noopener">
+                        <img class="project-image" src="https://api.microlink.io/?url=https://simplestclaw.com&screenshot=true&meta=false&embed=screenshot.url" alt="SimplestClaw" onerror="this.style.display='none'">
+                        <div class="project-content">
+                            <h3 class="project-title">SimplestClaw</h3>
+                            <p class="project-description">The easiest way to deploy OpenClaw. No terminal, no Telegram bots, no server configuration—just one click to get a persistent AI assistant running.</p>
+                            <span class="project-tag">Open Source</span>
+                            <span class="project-tag">Developer Tools</span>
+                            <div class="project-url">simplestclaw.com</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <a href="https://paylit.ai" target="_blank" rel="noopener">
+                        <img class="project-image" src="https://api.microlink.io/?url=https://paylit.ai&screenshot=true&meta=false&embed=screenshot.url" alt="Paylit" onerror="this.style.display='none'">
+                        <div class="project-content">
+                            <h3 class="project-title">Paylit</h3>
+                            <p class="project-description">Add beautiful checkouts to AI-generated websites in minutes. Designed for v0, Framer, and Webflow—just copy, paste, and start accepting payments.</p>
+                            <span class="project-tag">Payments</span>
+                            <span class="project-tag">No-Code</span>
+                            <div class="project-url">paylit.ai</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <a href="https://formr.ai" target="_blank" rel="noopener">
+                        <img class="project-image" src="https://api.microlink.io/?url=https://formr.ai&screenshot=true&meta=false&embed=screenshot.url" alt="Formr" onerror="this.style.display='none'">
+                        <div class="project-content">
+                            <h3 class="project-title">Formr</h3>
+                            <p class="project-description">Never fill out another form again. Upload a link to any online form and Formr automatically completes it using your saved information.</p>
+                            <span class="project-tag">Automation</span>
+                            <span class="project-tag">Productivity</span>
+                            <div class="project-url">formr.ai</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <a href="https://fine-mining.com/about" target="_blank" rel="noopener">
+                        <img class="project-image" src="https://api.microlink.io/?url=https://fine-mining.com/about&screenshot=true&meta=false&embed=screenshot.url" alt="Fine Mining" onerror="this.style.display='none'">
+                        <div class="project-content">
+                            <h3 class="project-title">Fine Mining</h3>
+                            <p class="project-description">A trusted marketplace for buying and selling computing hardware. Every product is verified for authenticity, condition, and functionality.</p>
+                            <span class="project-tag">Marketplace</span>
+                            <span class="project-tag">Hardware</span>
+                            <div class="project-url">fine-mining.com/about</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <a href="https://ireksapiary.com" target="_blank" rel="noopener">
+                        <img class="project-image" src="https://api.microlink.io/?url=https://ireksapiary.com&screenshot=true&meta=false&embed=screenshot.url" alt="Irek's Apiary" onerror="this.style.display='none'">
+                        <div class="project-content">
+                            <h3 class="project-title">Irek's Apiary</h3>
+                            <p class="project-description">Don't just smell the flowers—taste them. A local apiary bringing fresh, raw honey straight from the hive to your table.</p>
+                            <span class="project-tag">Beekeeping</span>
+                            <span class="project-tag">Local</span>
+                            <div class="project-url">ireksapiary.com</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bottom-row">
+                <div class="wallpaper-note">
+                    <p>The background image is a picture from our apiary (can you find the queen).</p>
+                </div>
+
+                <div class="mode-toggle">
+                    <span>View:</span>
+                    <a href="index.html">Research</a>
+                    <a href="modern/">AI Website</a>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
