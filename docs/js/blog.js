@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function renderPostList() {
         if (postList) {
-            let html = '<h2>Blog Posts</h2>';
+            let html = '';
             blogPosts.forEach(post => {
                 html += `
                     <div class="blog-post-preview">
